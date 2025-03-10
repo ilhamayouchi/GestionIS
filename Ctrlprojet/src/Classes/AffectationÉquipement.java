@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Classes;
+package classes;
  import java.util.Date;
 /**
  *
@@ -11,42 +11,35 @@ package Classes;
  */
 public class AffectationÉquipement {
     // Attributs
-    private int id;
-    private int salle_id;
-    private int equipement_id;
+   
+    private Salle salle;
+    private Équipement equipement;
     private Date date_affectation;
 
     // Constructeur
-    public AffectationÉquipement(int id, int salle_id, int equipement_id, Date date_affectation) {
-        this.id = id;
-        this.salle_id = salle_id;
-        this.equipement_id = equipement_id;
+    public AffectationÉquipement( Salle salle, Équipement equipement, Date date_affectation) {
+        this.salle= salle;
+        this.equipement= equipement;
         this.date_affectation = date_affectation;
     }
 
     // Getters et Setters
-    public int getId() {
-        return id;
+    
+
+    public Salle getSalle() {
+        return salle;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setSalle_(Salle salle) {
+        this.salle= salle;
     }
 
-    public int getSalle_id() {
-        return salle_id;
+    public Équipement getEquipement() {
+        return equipement;
     }
 
-    public void setSalle_id(int salle_id) {
-        this.salle_id = salle_id;
-    }
-
-    public int getEquipement_id() {
-        return equipement_id;
-    }
-
-    public void setEquipement_id(int equipement_id) {
-        this.equipement_id = equipement_id;
+    public void setEquipement(Équipement equipement) {
+        this.equipement = equipement;
     }
 
     public Date getDate_affectation() {
